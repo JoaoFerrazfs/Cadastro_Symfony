@@ -1,0 +1,31 @@
+{% extends "base.html.twig"  %}
+
+{% block topo %}
+
+    <div class = "topo"> 
+   
+        <img src="{{ asset ('img/logo.png') }} "/>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
+
+{% endblock %}
+
+{% block title %} Cadastro de Usuários {% endblock %}
+
+{% block body %}
+
+<form method="POST" action="{{ url('web_usuario_salvar')}}">
+        <input type="text" name="nome" placeholder="nome" />
+        <input type="email" name="email" placeholder="E-mail"/>
+
+        <button type="submit">Salvar</button>
+
+</form>
+
+{% endblock %}
+
